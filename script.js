@@ -12,17 +12,16 @@ const currTime = document.querySelector('#currTime');
 const durTime = document.querySelector('#durTime');
 
 const songs = [
-    'The Kid LAROI, Justin Bieber - Stay (Official Audio)',
-    'Drivers License - Olivia Rodrigo',
-    'Lil_Nas_X_-_Montero',
-    'good 4 u - Olivia Rodrigo',
-    'Levitating (feat. DaBaby) - Dua Lipa, DaBaby',
-    'Peaches (feat. Daniel Caesar & Giveon) - Justin Bieber, Daniel Caesar, Giveon',
-    'Doja_Cat_-_Kiss_Me_More',
-    'Blinding Lights - The Weekend',
-    'Heat Waves - Glass Animals',
-    'Masked Wolf - Astronaut In The Ocean',
-    'Industry Baby - Lil Nas X (Jack Harlow)'
+  'Doja_Cat_-_Kiss_Me_More',
+  'Drivers_License_-_Olivia_Rodrigo',
+  'Lil_Nas_X_-_Montero',
+  'Glass_Animals_-_Heat_Waves',
+  'Good_4_U',
+  'Justin_Bieber_-_Peaches',
+  'Lil_Nas_X_-_Industry_Baby',
+  'Masked_Wolf_-_Astronaut_in_the_Ocean',
+  'The_Kid_Laroi_and_Justin_Bieber_-_Stay (1)',
+  'The_Weeknd_-_Blinding_Lights'
 ];
 
 let songIndex = 2;
@@ -31,7 +30,7 @@ loadSong(songs[songIndex]);
 
 function loadSong(song) {
   title.innerText = song;
-  audio.src = `https://replit.com/@Cacteye/SpotifyAttempt1#Music%20.mp3/Drivers%20License%20-%20Olivia%20Rodrigo.mp3`;
+  audio.src = `music/${song}.mp3`;
   // audio.src = `music/${song}.mp3`;
   cover.src = `images/${song}.jpg`;
 
@@ -64,6 +63,15 @@ function pauseSong() {
   audio.pause();
 }
 
+audio.addEventListener('timeupdate', updateProgress);
+
+function updateProgress(e) {
+  const { duration, currentTime } = e.srcElement;
+  const progressPercent = (currentTime / duration) * 100;
+  progress.style.width = `${progressPercent}%`;
+
+}
+
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
 
@@ -89,15 +97,6 @@ function nextSong() {
   loadSong(songs[songIndex]);
 
   playSong();
-}
-
-audio.addEventListener('timeupdate', updateProgress);
-
-function updateProgress(e) {
-  const { duration, currentTime } = e.srcElement;
-  const progressPercent = (currentTime / duration) * 100;
-  progress.style.width = `${progressPercent}%`;
-
 }
 
 progressContainer.addEventListener('click', setProgress);
