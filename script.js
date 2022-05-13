@@ -12,13 +12,13 @@ const currTime = document.querySelector('#currTime');
 const durTime = document.querySelector('#durTime');
 
 const songs = [
-    'STAY (with Justin Bieber) - The Kid LAROI, Justin Bieber',
+    'The Kid LAROI, Justin Bieber - Stay (Official Audio)',
     'Drivers License - Olivia Rodrigo',
-    'Montero (Call Me By Your Name) - Lil Nas X',
+    'Lil_Nas_X_-_Montero',
     'good 4 u - Olivia Rodrigo',
     'Levitating (feat. DaBaby) - Dua Lipa, DaBaby',
     'Peaches (feat. Daniel Caesar & Giveon) - Justin Bieber, Daniel Caesar, Giveon',
-    'Kiss Me More (feat. SZA) - Doja Cat, SZA',
+    'Doja_Cat_-_Kiss_Me_More',
     'Blinding Lights - The Weekend',
     'Heat Waves - Glass Animals',
     'Masked Wolf - Astronaut In The Ocean',
