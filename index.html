@@ -1,44 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title> Music Player </title>
-  </head>
-  <body>
-    <h1 style="color:#FFFFFF";> Music Player </h1>
-    <div class="music-container" id="music-container">
-      <div class="music-info">
-        <h4 id="title"></h4>
-        <div class="progress-container" id="progress-container">
-          <div class="progress" id="progress"></div>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <strong>
+    <title> Notify </title>
+  </strong>
+
+  <div class="pyro">
+    <div class="before"></div>
+    <div class="after"></div>
+  </div>
+
+  <style>
+    div.gallery {
+      margin: 5px;
+      border: 1px solid #ccc;
+      float: left;
+      width: 20%;
+      height: 100%;
+      /*translate: 0, 20%;*/
+      position: center;
+    }
+
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+
+    div.gallery img {
+      width: 100%;
+      height: auto;
+      position: center;
+      /*translate: 0, 20%;*/
+    }
+
+    div.desc {
+      padding: 2%;
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="music-container" id="music-container">
+    <div class="music-info">
+
+      <h4 id="title"></h4>
+      <div class="progress-container" id="progress-container">
+        <div class="progress" id="progress"></div>
       </div>
-      
-      <audio src="MONTERO (Call Me By Your Name).mp3" id="audio"> 
+    </div>
+
+    <audio src="MONTERO (Call Me By Your Name).mp3" id="audio">
       controls</audio>
-      
-      <div class="img-container">
-        <img src="images/Lil_Nas_X_-_Montero.jpg" alt="music-cover" id="cover" />
-      </div>
-      <div class="navigation">
-        <button id="prev" class="action-btn">
-          <i class="fas fa-backward"></i>
-        </button>
+
+    <div class="img-container">
+      <img src="images/Lil_Nas_X_-_Montero.jpg" alt="music-cover" id="cover" />
+    </div>
+    <div class="navigation">
+      <button id="prev" class="action-btn">
+        <i class="fas fa-backward"></i>
         <button id="play" class="action-btn action-btn-big">
           <i class="fas fa-play"></i>
         </button>
         <button id="next" class="action-btn">
           <i class="fas fa-forward"></i>
         </button>
+        <button id="repeat" class="action-btn"></button>
+        <i class="fa fa-repeat" aria-hidden="true"></i>
+    </div>
+    <div class="trail-one">
+      <!-- <img src="images/Lil_Nas_X_-_Montero.jpg" alt="music-cover" id="cover"-->
+    </div>
+  </div>
+
+</body>
+
+<div class="button-box">
+  <!--button href="https://orbs.cacteye.repl.co/" target="_blank">Happy New Year!</button-->
+  <strong>
+    <center> <a style="color:#FF3131" href="https://orbs.cacteye.repl.co/" target="_blank"> New Years Countdown </a>
+    </center>
+  </strong>
+</div>
+
+<!--<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+
+
+<center>
+  <strong>
+    <h2 style="color:#FF3131" ;> Notify </h2>
+  </strong>
+</center>
+<h2 style="color:#FFFFFF" ;>
+  <strong>
+    <center> Songs In Shuffle </center>
+</h2> </strong>
+</center>
+
+<h2 style="color:#FFFFFF" ;>
+
+  <div class="row">
+    <!--<center> -->
+    <div class="column">
+      <div class="content">
+        <img onclick="uno()" src="images/PSY - That That.jpg" alt="music-cover" style="width:100%">
+        <script>
+          function uno() {
+            loadSong(songs[2]);
+          }
+        </script>
+        <h4> That That </h4>
+        <h5> PSY </h5>
       </div>
     </div>
-    <script src="script.js"></script>
-  </body>
+
+    <div class="column">
+      <div class="content">
+        <img onclick="tres()" src="images/IVE - Love Dive.jpg" alt="music-cover" style="width:100%">
+        <script>
+          function tres() {
+            loadSong(songs[3]);
+          }
+        </script>
+        <h4> Heat Waves </h4>
+        <h5> Glass Animals </h5>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="content">
+        <img onclick="cuatro()" src="images/NewJeans - Hype Boy.jpg" alt="music-cover" style="width:100%">
+        <script>
+          function cuatro() {
+            loadSong(songs[4]);
+          }
+        </script>
+        <h4> Hype Boy </h4>
+        <h5> NewJeans </h5>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="content">
+        <img onclick="cinco()" src="images/Blackpink Pink Venom.jpg" alt="music-cover" style="width:100%">
+        <script>
+          function cinco() {
+            loadSong(songs[5]);
+          }
+        </script>
+        <h4> Pink venom </h4>
+        <h5> Blackpink </h5>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="content">
+        <img onclick="seis()" src="images/Le Sserafim - Antifragile.jpg" alt="music-cover"
+          style="width:100%">
+        <script>
+          function seis() {
+            loadSong(songs[6]);
+          }
+        </script>
+        <h4> Antifragile </h4>
+        <h5> Le Sserafim </h5>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="content">
+        <img onclick="siete()" src="images/NewJeans - Attention.jpg" alt="music-cover"
+          style="width:100%">
+        <script>
+          function siete() {
+            loadSong(songs[7]);
+          }
+        </script>
+        <h4> Attention </h4>
+        <h5> NewJeans </h5>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="content">
+        <img onclick="ocho()" src="images/G-IDLE - Tomboy.jpg" alt="music-cover"
+          style="width:100%">
+        <script>
+          function ocho() {
+            loadSong(songs[8]);
+          }
+        </script>
+        <h4> Tomboy </h4>
+        <h5> G-IDLE </h5>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="content">
+        <img onclick="nueve()" src="images/IVE - After Like.jpg" alt="music-cover"
+          style="width:100%">
+        <script>
+          function nueve() {
+            loadSong(songs[9]);
+          }
+        </script>
+        <h4> After Like </h4>
+        <h5> IVE </h5>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="content">
+        <img onclick="diaz()" src="images/Newjeans - ditto.jpg" alt="music-cover" style="width:100%">
+        <script>
+          function diaz() {
+            loadSong(songs[10]);
+          }
+        </script>
+        <h4> Ditto </h4>
+        <h5> Newjeans </h5>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="content">
+        <img onclick="once()" src="images/BTS - Yet to come.jpg" alt="music-cover" style="width:100%">
+        <script>
+          function once() {
+            loadSong(songs[0]);
+          }
+        </script>
+        <h4>Yet to come</h4>
+        <h5> BTS </h5>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="content">
+        <img onclick="doce()" src="images/Taeyeon – INVU.jpg" alt="music-cover"
+          style="width:100%">
+        <script>
+          function doce() {
+            loadSong(songs[1]);
+          }
+        </script>
+        <h4> Drivers License </h4>
+        <h5>Olivia Rodrigo</h5>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="content">
+        <img onclick="trece()" src="images/TWICE - talk that talk.jpg" alt="music-cover" style="width:100%">
+        <script>
+          function trece() {
+            loadSong(songs[11]);
+          }
+        </script>
+        <h4> talk that talk </h4>
+        <h5>Twice</h5>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="content">
+        <img onclick="catorce()" src="images/Taeyang - Vibe.jpg" alt="music-cover" style="width:100%">
+        <script>
+          function catorce() {
+            loadSong(songs[12]);
+          }
+        </script>
+        <h4> Pet </h4>
+        <h5>A Perfect Circle</h5>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="content">
+        <img onclick="quince()" src="images/Stray Kids - MANIAC.jpg" alt="music-cover" style="width:100%">
+        <script>
+          function quince() {
+            loadSong(songs[24]);
+          }
+        </script>
+        <h4> MANIAC </h4>
+        <h5>Stray Kids</h5>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="content">
+        <img onclick="dieciséis()" src="images/Le Sserafim - Fearless.jpg" alt="music-cover" style="width:100%">
+        <script>
+          function dieciséis() {
+            loadSong(songs[23]);
+          }
+        </script>
+        <h4> Fearless </h4>
+        <h5>Le Sserafim</h5>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="content">
+        <img onclick="diecisiete()" src="images/Blackpink - Shut Down.jpg" alt="music-cover" style="width:100%">
+        <script>
+          function diecisiete() {
+            loadSong(songs[13]);
+          }
+        </script>
+        <h4> Shut Down </h4>
+        <h5>Blackpink</h5>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="content">
+        <img onclick="dieciocho()" src="images/Tomorrow x Together - Sugar Rush Ride.jpg" alt="music-cover" style="width:100%">
+        <script>
+          function dieciocho() {
+            loadSong(songs[14]);
+          }
+        </script>
+        <h4> Sugar Rush Ride </h4>
+        <h5>Tomorrow X Together</h5>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="content">
+        <img onclick="diecinueve()" src="images/Newjeans - OMG.jpg" alt="music-cover" style="width:100%">
+        <script>
+          function diecinueve() {
+            loadSong(songs[15]);
+          }
+        </script>
+        <h4> OMG </h4>
+        <h5>Newjeans</h5>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="content">
+        <img onclick="veinte()" src="images/Exo - Growl.jpg" alt="music-cover" style="width:100%">
+        <script>
+          function veinte() {
+            loadSong(songs[22]);
+          }
+        </script>
+        <h4> Growl </h4>
+        <h5>Exo</h5>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="content">
+        <img onclick="veintiuno()" src="images/Kara -  When I Move.jpg" alt="music-cover" style="width:100%">
+        <script>
+          function veintiuno() {
+            loadSong(songs[16]);
+          }
+        </script>
+        <h4> When I Move </h4>
+        <h5>Kara</h5>
+      </div>
+    </div>
+
+    
+      <!--<div class="column">
+    <div class="content">
+      <img src="images/Roman s Revenge.jpg" alt="music-cover" style="width:100%">
+      <h4> Roman's Revenge </h4>
+      <h5>Nicki Minaj</h5>
+    </div>
+  </div>  -->
+
+
+      <!--</center> -->
+      &nbsp
+      <script src="script.js"></script>
+
 </html>
